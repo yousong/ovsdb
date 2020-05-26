@@ -30,3 +30,9 @@ type IDatabase interface {
 	FindOneMatchNonZeros(IRow) IRow
 	FindOneMatchByAnyIndex(IRow) IRow
 }
+
+type Reference struct {
+	Referee    IRow
+	Referrer   IRow
+	OvsdbField string
+}
